@@ -31,7 +31,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (context) => const homepage());
       case '/fare':
         return PageRouteBuilder(
-          pageBuilder: (context, animation, scondaryanimation) => FareItemSection(fare: settings.arguments),
+          pageBuilder: (context, animation, scondaryanimation) => FareCardSection(fare: settings.arguments),
           transitionsBuilder: (context, animation, secondaryanimation, child) {
             var begin = const Offset(0.0, 1.0);
             var end = Offset.zero;

@@ -116,3 +116,65 @@ class FareItemSection extends StatelessWidget {
       );
   }
 }
+
+class FareCardSection extends StatelessWidget {
+  const FareCardSection({super.key, required this.fare});
+  final dynamic fare;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Card(
+        margin: const EdgeInsets.all(8),
+        color: Colors.lightBlueAccent.withOpacity(0.7),
+        elevation: 8,
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(4),
+              child: Row( 
+                children: [
+                  CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.white,
+                    child: CircleAvatar(
+                      child: Image.asset(
+                        'assets/images/production/bollore.png',
+                        fit: BoxFit.contain,
+                      ),
+                      radius: 20,
+                      backgroundColor: Colors.white,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 2),
+                          child: Text(
+                            fare.title,
+                            maxLines: 3,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 16),
+                          ),
+                        ),
+                        Text(
+                          fare.payement,
+                          style: const TextStyle(
+                              color: Colors.grey, fontSize: 14,),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        ),
+      );
+  }
+}
