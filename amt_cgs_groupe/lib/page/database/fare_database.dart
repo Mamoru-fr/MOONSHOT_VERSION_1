@@ -90,5 +90,5 @@ class FareDatabase {
   final List<Fare> defaultFares = [
     Fare(1,"01/11/24 - 14:00\nTour Bollore -> CDG","01/11/24","14:00",1,"Profesionel",20,4,"En Compte","Van"),
     Fare(2,"02/11/24 - 18:00\nCDG -> Tour Bollore","02/11/24","18:00",1,"Profesionel",4,20,"En compte","Van"),
-    Fare(3,"15/11/24 - 15:38\nGare de Lyon -> Gare du Nord",'15/11/24','15:38',1,"Particulier",1,5,"Paye","Van",)];
+    Fare(3,"15/11/24 - 15:38\nGare de Lyon -> Gare du Nord",'15/11/24','15:38',1,"Particulier",1,5,"Paye","Van, Siège Bébé")];
 }
